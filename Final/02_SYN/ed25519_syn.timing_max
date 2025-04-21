@@ -1,0 +1,738 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : ed25519
+Version: U-2022.12
+Date   : Thu Dec 12 17:43:39 2024
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: alu_u0/inv_state_reg[2]
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: alu_u0/u_mod_mult/H_reg[227]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  alu_u0/inv_state_reg[2]/CK (DFFHQX4)                    0.00 #     0.50 r
+  alu_u0/inv_state_reg[2]/Q (DFFHQX4)                     0.19       0.69 r
+  alu_u0/U5680/Y (INVXL)                                  0.07       0.76 f
+  alu_u0/U17861/Y (NOR2X2)                                0.09       0.85 r
+  alu_u0/U17877/Y (NAND3X1)                               0.08       0.94 f
+  alu_u0/U17878/Y (NOR2X1)                                0.16       1.09 r
+  alu_u0/U17879/Y (NAND4X2)                               0.13       1.23 f
+  alu_u0/U17882/Y (NAND2X2)                               0.11       1.34 r
+  alu_u0/U6078/Y (BUFX12)                                 0.34       1.68 r
+  alu_u0/U39081/Y (AOI22X1)                               0.16       1.85 f
+  alu_u0/U12935/Y (OAI211X1)                              0.24       2.09 r
+  alu_u0/U12700/Y (BUFX4)                                 0.34       2.43 r
+  alu_u0/U61893/Y (NOR2X1)                                0.11       2.54 f
+  alu_u0/U61895/Y (NOR2X1)                                0.13       2.67 r
+  alu_u0/U1673/Y (NAND2X1)                                0.12       2.78 f
+  alu_u0/U1622/Y (NOR2X2)                                 0.11       2.90 r
+  alu_u0/U2691/Y (NAND2X1)                                0.29       3.18 f
+  alu_u0/U62471/Y (NOR2X1)                                0.17       3.35 r
+  alu_u0/U62472/Y (NAND2XL)                               0.07       3.42 f
+  alu_u0/U1088/Y (OAI21XL)                                0.25       3.67 r
+  alu_u0/U26529/Y (CLKXOR2X2)                             0.57       4.24 f
+  alu_u0/U63488/Y (OAI21XL)                               0.33       4.57 r
+  alu_u0/U63489/Y (XOR2X1)                                0.23       4.80 f
+  alu_u0/u_mod_mult/mult_x_1/U7687/CO (CMPR42X1)          0.77       5.57 f
+  alu_u0/u_mod_mult/mult_x_1/U7660/S (CMPR42X1)           0.68       6.25 f
+  alu_u0/U5086/ICO (CMPR42X1)                             0.24       6.49 f
+  alu_u0/u_mod_mult/mult_x_1/U7637/ICO (CMPR42X1)         0.22       6.71 f
+  alu_u0/u_mod_mult/mult_x_1/U7619/S (CMPR42X1)           0.34       7.05 f
+  alu_u0/u_mod_mult/mult_x_1/U7617/CO (CMPR42X1)          0.64       7.69 r
+  alu_u0/U6571/Y (NAND2XL)                                0.09       7.78 f
+  alu_u0/U35580/Y (OAI21XL)                               0.30       8.08 r
+  alu_u0/U35584/Y (AOI21X1)                               0.15       8.23 f
+  alu_u0/U35592/Y (OAI21XL)                               0.32       8.55 r
+  alu_u0/U35620/Y (AOI21X1)                               0.13       8.68 f
+  alu_u0/U9631/Y (OAI21X1)                                0.11       8.79 r
+  alu_u0/U35621/Y (AOI21X2)                               0.13       8.92 f
+  alu_u0/U6301/Y (BUFX12)                                 0.19       9.11 f
+  alu_u0/U101147/Y (OAI21XL)                              0.22       9.33 r
+  alu_u0/U5779/Y (XNOR2X1)                                0.21       9.53 f
+  alu_u0/U101149/Y (NOR2BX1)                              0.19       9.72 f
+  alu_u0/u_mod_mult/H_reg[227]/D (DFFHQX4)                0.00       9.72 f
+  data arrival time                                                  9.72
+
+  clock i_clk (rise edge)                                 9.50       9.50
+  clock network delay (ideal)                             0.50      10.00
+  clock uncertainty                                      -0.10       9.90
+  alu_u0/u_mod_mult/H_reg[227]/CK (DFFHQX4)               0.00       9.90 r
+  library setup time                                     -0.18       9.72
+  data required time                                                 9.72
+  --------------------------------------------------------------------------
+  data required time                                                 9.72
+  data arrival time                                                 -9.72
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: alu_u0/inv_state_reg[2]
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: alu_u0/u_mod_mult/H_reg[212]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  alu_u0/inv_state_reg[2]/CK (DFFHQX4)                    0.00 #     0.50 r
+  alu_u0/inv_state_reg[2]/Q (DFFHQX4)                     0.19       0.69 r
+  alu_u0/U5680/Y (INVXL)                                  0.07       0.76 f
+  alu_u0/U17861/Y (NOR2X2)                                0.09       0.85 r
+  alu_u0/U17877/Y (NAND3X1)                               0.08       0.94 f
+  alu_u0/U17878/Y (NOR2X1)                                0.16       1.09 r
+  alu_u0/U17879/Y (NAND4X2)                               0.13       1.23 f
+  alu_u0/U17882/Y (NAND2X2)                               0.11       1.34 r
+  alu_u0/U6078/Y (BUFX12)                                 0.34       1.68 r
+  alu_u0/U39081/Y (AOI22X1)                               0.16       1.85 f
+  alu_u0/U12935/Y (OAI211X1)                              0.24       2.09 r
+  alu_u0/U12700/Y (BUFX4)                                 0.34       2.43 r
+  alu_u0/U61893/Y (NOR2X1)                                0.11       2.54 f
+  alu_u0/U61895/Y (NOR2X1)                                0.13       2.67 r
+  alu_u0/U1673/Y (NAND2X1)                                0.12       2.78 f
+  alu_u0/U1622/Y (NOR2X2)                                 0.11       2.90 r
+  alu_u0/U2691/Y (NAND2X1)                                0.29       3.18 f
+  alu_u0/U62471/Y (NOR2X1)                                0.17       3.35 r
+  alu_u0/U62472/Y (NAND2XL)                               0.07       3.42 f
+  alu_u0/U1088/Y (OAI21XL)                                0.25       3.67 r
+  alu_u0/U26529/Y (CLKXOR2X2)                             0.57       4.24 f
+  alu_u0/U63488/Y (OAI21XL)                               0.33       4.57 r
+  alu_u0/U63489/Y (XOR2X1)                                0.23       4.80 f
+  alu_u0/u_mod_mult/mult_x_1/U7687/CO (CMPR42X1)          0.77       5.57 f
+  alu_u0/u_mod_mult/mult_x_1/U7660/S (CMPR42X1)           0.68       6.25 f
+  alu_u0/U5086/ICO (CMPR42X1)                             0.24       6.49 f
+  alu_u0/u_mod_mult/mult_x_1/U7637/ICO (CMPR42X1)         0.22       6.71 f
+  alu_u0/u_mod_mult/mult_x_1/U7619/S (CMPR42X1)           0.34       7.05 f
+  alu_u0/u_mod_mult/mult_x_1/U7617/CO (CMPR42X1)          0.64       7.69 r
+  alu_u0/U6571/Y (NAND2XL)                                0.09       7.78 f
+  alu_u0/U35580/Y (OAI21XL)                               0.30       8.08 r
+  alu_u0/U35584/Y (AOI21X1)                               0.15       8.23 f
+  alu_u0/U35592/Y (OAI21XL)                               0.32       8.55 r
+  alu_u0/U35620/Y (AOI21X1)                               0.13       8.68 f
+  alu_u0/U9631/Y (OAI21X1)                                0.11       8.79 r
+  alu_u0/U35621/Y (AOI21X2)                               0.13       8.92 f
+  alu_u0/U6301/Y (BUFX12)                                 0.19       9.11 f
+  alu_u0/U101277/Y (OAI21XL)                              0.22       9.33 r
+  alu_u0/U5781/Y (XNOR2X1)                                0.21       9.53 f
+  alu_u0/U101280/Y (NOR2BX1)                              0.19       9.72 f
+  alu_u0/u_mod_mult/H_reg[212]/D (DFFHQX4)                0.00       9.72 f
+  data arrival time                                                  9.72
+
+  clock i_clk (rise edge)                                 9.50       9.50
+  clock network delay (ideal)                             0.50      10.00
+  clock uncertainty                                      -0.10       9.90
+  alu_u0/u_mod_mult/H_reg[212]/CK (DFFHQX4)               0.00       9.90 r
+  library setup time                                     -0.18       9.72
+  data required time                                                 9.72
+  --------------------------------------------------------------------------
+  data required time                                                 9.72
+  data arrival time                                                 -9.72
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: alu_u0/inv_state_reg[2]
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: alu_u0/u_mod_mult/H_reg[237]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  alu_u0/inv_state_reg[2]/CK (DFFHQX4)                    0.00 #     0.50 r
+  alu_u0/inv_state_reg[2]/Q (DFFHQX4)                     0.19       0.69 r
+  alu_u0/U5680/Y (INVXL)                                  0.07       0.76 f
+  alu_u0/U17861/Y (NOR2X2)                                0.09       0.85 r
+  alu_u0/U17877/Y (NAND3X1)                               0.08       0.94 f
+  alu_u0/U17878/Y (NOR2X1)                                0.16       1.09 r
+  alu_u0/U17879/Y (NAND4X2)                               0.13       1.23 f
+  alu_u0/U17882/Y (NAND2X2)                               0.11       1.34 r
+  alu_u0/U6078/Y (BUFX12)                                 0.34       1.68 r
+  alu_u0/U39081/Y (AOI22X1)                               0.16       1.85 f
+  alu_u0/U12935/Y (OAI211X1)                              0.24       2.09 r
+  alu_u0/U12700/Y (BUFX4)                                 0.34       2.43 r
+  alu_u0/U61893/Y (NOR2X1)                                0.11       2.54 f
+  alu_u0/U61895/Y (NOR2X1)                                0.13       2.67 r
+  alu_u0/U1673/Y (NAND2X1)                                0.12       2.78 f
+  alu_u0/U1622/Y (NOR2X2)                                 0.11       2.90 r
+  alu_u0/U2691/Y (NAND2X1)                                0.29       3.18 f
+  alu_u0/U62471/Y (NOR2X1)                                0.17       3.35 r
+  alu_u0/U62472/Y (NAND2XL)                               0.07       3.42 f
+  alu_u0/U1088/Y (OAI21XL)                                0.25       3.67 r
+  alu_u0/U26529/Y (CLKXOR2X2)                             0.57       4.24 f
+  alu_u0/U63488/Y (OAI21XL)                               0.33       4.57 r
+  alu_u0/U63489/Y (XOR2X1)                                0.23       4.80 f
+  alu_u0/u_mod_mult/mult_x_1/U7687/CO (CMPR42X1)          0.77       5.57 f
+  alu_u0/u_mod_mult/mult_x_1/U7660/S (CMPR42X1)           0.68       6.25 f
+  alu_u0/U5086/ICO (CMPR42X1)                             0.24       6.49 f
+  alu_u0/u_mod_mult/mult_x_1/U7637/ICO (CMPR42X1)         0.22       6.71 f
+  alu_u0/u_mod_mult/mult_x_1/U7619/S (CMPR42X1)           0.34       7.05 f
+  alu_u0/u_mod_mult/mult_x_1/U7617/CO (CMPR42X1)          0.64       7.69 r
+  alu_u0/U6571/Y (NAND2XL)                                0.09       7.78 f
+  alu_u0/U35580/Y (OAI21XL)                               0.30       8.08 r
+  alu_u0/U35584/Y (AOI21X1)                               0.15       8.23 f
+  alu_u0/U35592/Y (OAI21XL)                               0.32       8.55 r
+  alu_u0/U35620/Y (AOI21X1)                               0.13       8.68 f
+  alu_u0/U9631/Y (OAI21X1)                                0.11       8.79 r
+  alu_u0/U35621/Y (AOI21X2)                               0.13       8.92 f
+  alu_u0/U6301/Y (BUFX12)                                 0.19       9.11 f
+  alu_u0/U101067/Y (OAI21XL)                              0.22       9.33 r
+  alu_u0/U5782/Y (XNOR2X1)                                0.21       9.53 f
+  alu_u0/U101069/Y (NOR2BX1)                              0.19       9.72 f
+  alu_u0/u_mod_mult/H_reg[237]/D (DFFHQX4)                0.00       9.72 f
+  data arrival time                                                  9.72
+
+  clock i_clk (rise edge)                                 9.50       9.50
+  clock network delay (ideal)                             0.50      10.00
+  clock uncertainty                                      -0.10       9.90
+  alu_u0/u_mod_mult/H_reg[237]/CK (DFFHQX4)               0.00       9.90 r
+  library setup time                                     -0.18       9.72
+  data required time                                                 9.72
+  --------------------------------------------------------------------------
+  data required time                                                 9.72
+  data arrival time                                                 -9.72
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: alu_u0/R_16
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: alu_u0/u_mod_mult/L_reg[209]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  alu_u0/R_16/CK (DFFHQX4)                                0.00 #     0.50 r
+  alu_u0/R_16/Q (DFFHQX4)                                 0.19       0.69 r
+  alu_u0/U13673/Y (INVX3)                                 0.05       0.74 f
+  alu_u0/U17839/Y (NAND2X4)                               0.07       0.81 r
+  alu_u0/U17845/Y (NOR2X4)                                0.06       0.87 f
+  alu_u0/U8852/Y (INVX4)                                  0.06       0.93 r
+  alu_u0/U17846/Y (NOR2X6)                                0.06       0.99 f
+  alu_u0/U17963/Y (OAI21X4)                               0.09       1.08 r
+  alu_u0/U17964/Y (NAND2X2)                               0.08       1.15 f
+  alu_u0/U8766/Y (BUFX8)                                  0.22       1.38 f
+  alu_u0/U14060/Y (AO21X1)                                0.28       1.65 f
+  alu_u0/U20991/Y (AOI211XL)                              0.21       1.86 r
+  alu_u0/U20993/Y (OAI211X4)                              0.30       2.16 f
+  alu_u0/U1789/Y (INVX6)                                  0.09       2.24 r
+  alu_u0/U42698/Y (INVX20)                                0.11       2.35 f
+  alu_u0/U42757/Y (XNOR2X2)                               0.13       2.48 r
+  alu_u0/U12521/Y (AND3X4)                                0.63       3.12 r
+  alu_u0/U42823/Y (AOI222XL)                              0.26       3.38 f
+  alu_u0/U42824/Y (OAI21XL)                               0.18       3.56 r
+  alu_u0/U42825/Y (XOR2X1)                                0.20       3.76 f
+  alu_u0/U3287/S (ADDHXL)                                 0.26       4.02 r
+  alu_u0/U42837/CO (ADDFXL)                               0.68       4.70 r
+  alu_u0/u_mod_mult/mult_x_3/U8444/CO (CMPR42X1)          0.59       5.28 f
+  alu_u0/u_mod_mult/mult_x_3/U8423/CO (CMPR42X1)          0.25       5.53 f
+  alu_u0/u_mod_mult/mult_x_3/U8394/ICO (CMPR42X1)         0.27       5.81 f
+  alu_u0/u_mod_mult/mult_x_3/U8372/S (CMPR42X1)           0.69       6.50 f
+  alu_u0/u_mod_mult/mult_x_3/U8368/S (CMPR42X1)           0.75       7.24 f
+  alu_u0/U5378/S (CMPR42X1)                               0.65       7.90 r
+  alu_u0/U34508/Y (NOR2X1)                                0.07       7.96 f
+  alu_u0/U5120/Y (NOR2XL)                                 0.23       8.19 r
+  alu_u0/U34510/Y (NAND2X1)                               0.11       8.30 f
+  alu_u0/U34555/Y (OAI21X1)                               0.20       8.50 r
+  alu_u0/U34570/Y (AOI21X1)                               0.12       8.63 f
+  alu_u0/U34571/Y (OAI21X2)                               0.10       8.73 r
+  alu_u0/U34683/Y (AOI21X2)                               0.12       8.85 f
+  alu_u0/U9346/Y (BUFX12)                                 0.19       9.04 f
+  alu_u0/U102610/Y (OAI21XL)                              0.22       9.26 r
+  alu_u0/U102612/Y (XNOR2X1)                              0.21       9.47 f
+  alu_u0/U102613/Y (NOR2BX1)                              0.18       9.65 f
+  alu_u0/u_mod_mult/L_reg[209]/D (DFFQX4)                 0.00       9.65 f
+  data arrival time                                                  9.65
+
+  clock i_clk (rise edge)                                 9.50       9.50
+  clock network delay (ideal)                             0.50      10.00
+  clock uncertainty                                      -0.10       9.90
+  alu_u0/u_mod_mult/L_reg[209]/CK (DFFQX4)                0.00       9.90 r
+  library setup time                                     -0.25       9.65
+  data required time                                                 9.65
+  --------------------------------------------------------------------------
+  data required time                                                 9.65
+  data arrival time                                                 -9.65
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: alu_u0/R_17
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: alu_u0/u_mod_mult/M_reg[140]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  alu_u0/R_17/CK (DFFHQX4)                                0.00 #     0.50 r
+  alu_u0/R_17/Q (DFFHQX4)                                 0.20       0.70 f
+  alu_u0/U17829/Y (INVX1)                                 0.09       0.79 r
+  alu_u0/U17830/Y (NAND3X2)                               0.08       0.88 f
+  alu_u0/U17831/Y (NOR2X2)                                0.11       0.99 r
+  alu_u0/U40671/Y (OAI2BB2X4)                             0.19       1.18 r
+  alu_u0/U33963/Y (OR2X4)                                 0.16       1.33 r
+  alu_u0/U15223/Y (CLKBUFX3)                              0.21       1.55 r
+  alu_u0/U18973/Y (INVX1)                                 0.07       1.62 f
+  alu_u0/U18991/Y (AOI2BB2X1)                             0.24       1.85 f
+  alu_u0/U30691/Y (OAI211X1)                              0.18       2.04 r
+  alu_u0/U2073/Y (NOR2X1)                                 0.16       2.20 f
+  alu_u0/U20025/Y (OAI21X2)                               0.17       2.37 r
+  alu_u0/U20029/Y (AOI21X2)                               0.11       2.49 f
+  alu_u0/U20032/Y (OAI21X2)                               0.16       2.65 r
+  alu_u0/U20043/Y (AOI21X2)                               0.12       2.76 f
+  alu_u0/U1812/Y (OAI21X1)                                0.15       2.91 r
+  alu_u0/U20061/Y (AO21X4)                                0.15       3.06 r
+  alu_u0/U7077/Y (INVX6)                                  0.05       3.11 f
+  alu_u0/U21275/Y (BUFX8)                                 0.13       3.24 f
+  alu_u0/U1592/Y (OAI21X1)                                0.18       3.42 r
+  alu_u0/U21280/Y (XNOR2X4)                               0.21       3.63 r
+  alu_u0/U1457/Y (INVX3)                                  0.13       3.77 f
+  alu_u0/U83563/Y (INVX4)                                 0.14       3.91 r
+  alu_u0/U85875/Y (XNOR2X1)                               0.19       4.10 f
+  alu_u0/U903/Y (OAI22XL)                                 0.37       4.47 r
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10278/S (CMPR42X1)
+                                                          0.88       5.35 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10272/ICO (CMPR42X1)
+                                                          0.25       5.60 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10250/CO (CMPR42X1)
+                                                          0.25       5.85 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10218/CO (CMPR42X1)
+                                                          0.76       6.61 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10189/S (CMPR42X1)
+                                                          0.67       7.28 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10188/S (CMPR42X1)
+                                                          0.51       7.79 r
+  alu_u0/U18503/Y (NAND2XL)                               0.07       7.87 f
+  alu_u0/U18504/Y (INVXL)                                 0.12       7.98 r
+  alu_u0/U18507/Y (AOI21X1)                               0.09       8.08 f
+  alu_u0/U18513/Y (OAI21XL)                               0.21       8.29 r
+  alu_u0/U18514/Y (AOI21X1)                               0.11       8.40 f
+  alu_u0/U18530/Y (OAI21X1)                               0.15       8.55 r
+  alu_u0/U18531/Y (AOI21X1)                               0.09       8.64 f
+  alu_u0/U18602/Y (OAI21X2)                               0.16       8.80 r
+  alu_u0/U103726/Y (INVX1)                                0.20       9.00 f
+  alu_u0/U103922/Y (OAI21XL)                              0.25       9.25 r
+  alu_u0/U103925/Y (XNOR2X1)                              0.21       9.45 f
+  alu_u0/U103926/Y (NOR2BX1)                              0.17       9.63 f
+  alu_u0/u_mod_mult/M_reg[140]/D (DFFQX1)                 0.00       9.63 f
+  data arrival time                                                  9.63
+
+  clock i_clk (rise edge)                                 9.50       9.50
+  clock network delay (ideal)                             0.50      10.00
+  clock uncertainty                                      -0.10       9.90
+  alu_u0/u_mod_mult/M_reg[140]/CK (DFFQX1)                0.00       9.90 r
+  library setup time                                     -0.27       9.63
+  data required time                                                 9.63
+  --------------------------------------------------------------------------
+  data required time                                                 9.63
+  data arrival time                                                 -9.63
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: alu_u0/R_17
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: alu_u0/u_mod_mult/M_reg[148]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  alu_u0/R_17/CK (DFFHQX4)                                0.00 #     0.50 r
+  alu_u0/R_17/Q (DFFHQX4)                                 0.20       0.70 f
+  alu_u0/U17829/Y (INVX1)                                 0.09       0.79 r
+  alu_u0/U17830/Y (NAND3X2)                               0.08       0.88 f
+  alu_u0/U17831/Y (NOR2X2)                                0.11       0.99 r
+  alu_u0/U40671/Y (OAI2BB2X4)                             0.19       1.18 r
+  alu_u0/U33963/Y (OR2X4)                                 0.16       1.33 r
+  alu_u0/U15223/Y (CLKBUFX3)                              0.21       1.55 r
+  alu_u0/U18973/Y (INVX1)                                 0.07       1.62 f
+  alu_u0/U18991/Y (AOI2BB2X1)                             0.24       1.85 f
+  alu_u0/U30691/Y (OAI211X1)                              0.18       2.04 r
+  alu_u0/U2073/Y (NOR2X1)                                 0.16       2.20 f
+  alu_u0/U20025/Y (OAI21X2)                               0.17       2.37 r
+  alu_u0/U20029/Y (AOI21X2)                               0.11       2.49 f
+  alu_u0/U20032/Y (OAI21X2)                               0.16       2.65 r
+  alu_u0/U20043/Y (AOI21X2)                               0.12       2.76 f
+  alu_u0/U1812/Y (OAI21X1)                                0.15       2.91 r
+  alu_u0/U20061/Y (AO21X4)                                0.15       3.06 r
+  alu_u0/U7077/Y (INVX6)                                  0.05       3.11 f
+  alu_u0/U21275/Y (BUFX8)                                 0.13       3.24 f
+  alu_u0/U1592/Y (OAI21X1)                                0.18       3.42 r
+  alu_u0/U21280/Y (XNOR2X4)                               0.21       3.63 r
+  alu_u0/U1457/Y (INVX3)                                  0.13       3.77 f
+  alu_u0/U83563/Y (INVX4)                                 0.14       3.91 r
+  alu_u0/U85875/Y (XNOR2X1)                               0.19       4.10 f
+  alu_u0/U903/Y (OAI22XL)                                 0.37       4.47 r
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10278/S (CMPR42X1)
+                                                          0.88       5.35 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10272/ICO (CMPR42X1)
+                                                          0.25       5.60 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10250/CO (CMPR42X1)
+                                                          0.25       5.85 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10218/CO (CMPR42X1)
+                                                          0.76       6.61 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10189/S (CMPR42X1)
+                                                          0.67       7.28 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10188/S (CMPR42X1)
+                                                          0.51       7.79 r
+  alu_u0/U18503/Y (NAND2XL)                               0.07       7.87 f
+  alu_u0/U18504/Y (INVXL)                                 0.12       7.98 r
+  alu_u0/U18507/Y (AOI21X1)                               0.09       8.08 f
+  alu_u0/U18513/Y (OAI21XL)                               0.21       8.29 r
+  alu_u0/U18514/Y (AOI21X1)                               0.11       8.40 f
+  alu_u0/U18530/Y (OAI21X1)                               0.15       8.55 r
+  alu_u0/U18531/Y (AOI21X1)                               0.09       8.64 f
+  alu_u0/U18602/Y (OAI21X2)                               0.16       8.80 r
+  alu_u0/U103726/Y (INVX1)                                0.20       9.00 f
+  alu_u0/U103863/Y (OAI21XL)                              0.25       9.25 r
+  alu_u0/U103866/Y (XNOR2X1)                              0.21       9.45 f
+  alu_u0/U103867/Y (NOR2BX1)                              0.17       9.63 f
+  alu_u0/u_mod_mult/M_reg[148]/D (DFFQX1)                 0.00       9.63 f
+  data arrival time                                                  9.63
+
+  clock i_clk (rise edge)                                 9.50       9.50
+  clock network delay (ideal)                             0.50      10.00
+  clock uncertainty                                      -0.10       9.90
+  alu_u0/u_mod_mult/M_reg[148]/CK (DFFQX1)                0.00       9.90 r
+  library setup time                                     -0.27       9.63
+  data required time                                                 9.63
+  --------------------------------------------------------------------------
+  data required time                                                 9.63
+  data arrival time                                                 -9.63
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: alu_u0/R_17
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: alu_u0/u_mod_mult/M_reg[144]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  alu_u0/R_17/CK (DFFHQX4)                                0.00 #     0.50 r
+  alu_u0/R_17/Q (DFFHQX4)                                 0.20       0.70 f
+  alu_u0/U17829/Y (INVX1)                                 0.09       0.79 r
+  alu_u0/U17830/Y (NAND3X2)                               0.08       0.88 f
+  alu_u0/U17831/Y (NOR2X2)                                0.11       0.99 r
+  alu_u0/U40671/Y (OAI2BB2X4)                             0.19       1.18 r
+  alu_u0/U33963/Y (OR2X4)                                 0.16       1.33 r
+  alu_u0/U15223/Y (CLKBUFX3)                              0.21       1.55 r
+  alu_u0/U18973/Y (INVX1)                                 0.07       1.62 f
+  alu_u0/U18991/Y (AOI2BB2X1)                             0.24       1.85 f
+  alu_u0/U30691/Y (OAI211X1)                              0.18       2.04 r
+  alu_u0/U2073/Y (NOR2X1)                                 0.16       2.20 f
+  alu_u0/U20025/Y (OAI21X2)                               0.17       2.37 r
+  alu_u0/U20029/Y (AOI21X2)                               0.11       2.49 f
+  alu_u0/U20032/Y (OAI21X2)                               0.16       2.65 r
+  alu_u0/U20043/Y (AOI21X2)                               0.12       2.76 f
+  alu_u0/U1812/Y (OAI21X1)                                0.15       2.91 r
+  alu_u0/U20061/Y (AO21X4)                                0.15       3.06 r
+  alu_u0/U7077/Y (INVX6)                                  0.05       3.11 f
+  alu_u0/U21275/Y (BUFX8)                                 0.13       3.24 f
+  alu_u0/U1592/Y (OAI21X1)                                0.18       3.42 r
+  alu_u0/U21280/Y (XNOR2X4)                               0.21       3.63 r
+  alu_u0/U1457/Y (INVX3)                                  0.13       3.77 f
+  alu_u0/U83563/Y (INVX4)                                 0.14       3.91 r
+  alu_u0/U85875/Y (XNOR2X1)                               0.19       4.10 f
+  alu_u0/U903/Y (OAI22XL)                                 0.37       4.47 r
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10278/S (CMPR42X1)
+                                                          0.88       5.35 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10272/ICO (CMPR42X1)
+                                                          0.25       5.60 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10250/CO (CMPR42X1)
+                                                          0.25       5.85 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10218/CO (CMPR42X1)
+                                                          0.76       6.61 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10189/S (CMPR42X1)
+                                                          0.67       7.28 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10188/S (CMPR42X1)
+                                                          0.51       7.79 r
+  alu_u0/U18503/Y (NAND2XL)                               0.07       7.87 f
+  alu_u0/U18504/Y (INVXL)                                 0.12       7.98 r
+  alu_u0/U18507/Y (AOI21X1)                               0.09       8.08 f
+  alu_u0/U18513/Y (OAI21XL)                               0.21       8.29 r
+  alu_u0/U18514/Y (AOI21X1)                               0.11       8.40 f
+  alu_u0/U18530/Y (OAI21X1)                               0.15       8.55 r
+  alu_u0/U18531/Y (AOI21X1)                               0.09       8.64 f
+  alu_u0/U18602/Y (OAI21X2)                               0.16       8.80 r
+  alu_u0/U103726/Y (INVX1)                                0.20       9.00 f
+  alu_u0/U103895/Y (OAI21XL)                              0.25       9.25 r
+  alu_u0/U103898/Y (XNOR2X1)                              0.21       9.45 f
+  alu_u0/U103899/Y (NOR2BX1)                              0.17       9.63 f
+  alu_u0/u_mod_mult/M_reg[144]/D (DFFQX1)                 0.00       9.63 f
+  data arrival time                                                  9.63
+
+  clock i_clk (rise edge)                                 9.50       9.50
+  clock network delay (ideal)                             0.50      10.00
+  clock uncertainty                                      -0.10       9.90
+  alu_u0/u_mod_mult/M_reg[144]/CK (DFFQX1)                0.00       9.90 r
+  library setup time                                     -0.27       9.63
+  data required time                                                 9.63
+  --------------------------------------------------------------------------
+  data required time                                                 9.63
+  data arrival time                                                 -9.63
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: alu_u0/R_17
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: alu_u0/u_mod_mult/M_reg[136]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  alu_u0/R_17/CK (DFFHQX4)                                0.00 #     0.50 r
+  alu_u0/R_17/Q (DFFHQX4)                                 0.20       0.70 f
+  alu_u0/U17829/Y (INVX1)                                 0.09       0.79 r
+  alu_u0/U17830/Y (NAND3X2)                               0.08       0.88 f
+  alu_u0/U17831/Y (NOR2X2)                                0.11       0.99 r
+  alu_u0/U40671/Y (OAI2BB2X4)                             0.19       1.18 r
+  alu_u0/U33963/Y (OR2X4)                                 0.16       1.33 r
+  alu_u0/U15223/Y (CLKBUFX3)                              0.21       1.55 r
+  alu_u0/U18973/Y (INVX1)                                 0.07       1.62 f
+  alu_u0/U18991/Y (AOI2BB2X1)                             0.24       1.85 f
+  alu_u0/U30691/Y (OAI211X1)                              0.18       2.04 r
+  alu_u0/U2073/Y (NOR2X1)                                 0.16       2.20 f
+  alu_u0/U20025/Y (OAI21X2)                               0.17       2.37 r
+  alu_u0/U20029/Y (AOI21X2)                               0.11       2.49 f
+  alu_u0/U20032/Y (OAI21X2)                               0.16       2.65 r
+  alu_u0/U20043/Y (AOI21X2)                               0.12       2.76 f
+  alu_u0/U1812/Y (OAI21X1)                                0.15       2.91 r
+  alu_u0/U20061/Y (AO21X4)                                0.15       3.06 r
+  alu_u0/U7077/Y (INVX6)                                  0.05       3.11 f
+  alu_u0/U21275/Y (BUFX8)                                 0.13       3.24 f
+  alu_u0/U1592/Y (OAI21X1)                                0.18       3.42 r
+  alu_u0/U21280/Y (XNOR2X4)                               0.21       3.63 r
+  alu_u0/U1457/Y (INVX3)                                  0.13       3.77 f
+  alu_u0/U83563/Y (INVX4)                                 0.14       3.91 r
+  alu_u0/U85875/Y (XNOR2X1)                               0.19       4.10 f
+  alu_u0/U903/Y (OAI22XL)                                 0.37       4.47 r
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10278/S (CMPR42X1)
+                                                          0.88       5.35 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10272/ICO (CMPR42X1)
+                                                          0.25       5.60 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10250/CO (CMPR42X1)
+                                                          0.25       5.85 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10218/CO (CMPR42X1)
+                                                          0.76       6.61 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10189/S (CMPR42X1)
+                                                          0.67       7.28 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U10188/S (CMPR42X1)
+                                                          0.51       7.79 r
+  alu_u0/U18503/Y (NAND2XL)                               0.07       7.87 f
+  alu_u0/U18504/Y (INVXL)                                 0.12       7.98 r
+  alu_u0/U18507/Y (AOI21X1)                               0.09       8.08 f
+  alu_u0/U18513/Y (OAI21XL)                               0.21       8.29 r
+  alu_u0/U18514/Y (AOI21X1)                               0.11       8.40 f
+  alu_u0/U18530/Y (OAI21X1)                               0.15       8.55 r
+  alu_u0/U18531/Y (AOI21X1)                               0.09       8.64 f
+  alu_u0/U18602/Y (OAI21X2)                               0.16       8.80 r
+  alu_u0/U103726/Y (INVX1)                                0.20       9.00 f
+  alu_u0/U103949/Y (OAI21XL)                              0.25       9.25 r
+  alu_u0/U103952/Y (XNOR2X1)                              0.21       9.45 f
+  alu_u0/U103953/Y (NOR2BX1)                              0.17       9.63 f
+  alu_u0/u_mod_mult/M_reg[136]/D (DFFQX1)                 0.00       9.63 f
+  data arrival time                                                  9.63
+
+  clock i_clk (rise edge)                                 9.50       9.50
+  clock network delay (ideal)                             0.50      10.00
+  clock uncertainty                                      -0.10       9.90
+  alu_u0/u_mod_mult/M_reg[136]/CK (DFFQX1)                0.00       9.90 r
+  library setup time                                     -0.27       9.63
+  data required time                                                 9.63
+  --------------------------------------------------------------------------
+  data required time                                                 9.63
+  data arrival time                                                 -9.63
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: alu_u0/R_23
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: alu_u0/u_mod_mult/M_reg[205]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  alu_u0/R_23/CK (DFFQX4)                                 0.00 #     0.50 r
+  alu_u0/R_23/Q (DFFQX4)                                  0.27       0.77 r
+  alu_u0/U17819/Y (NOR2X8)                                0.07       0.84 f
+  alu_u0/U17820/Y (NAND2X2)                               0.09       0.94 r
+  alu_u0/U17822/Y (NOR2X4)                                0.06       1.00 f
+  alu_u0/U2315/Y (NAND2X2)                                0.11       1.11 r
+  alu_u0/U17968/Y (BUFX20)                                0.17       1.28 r
+  alu_u0/U2285/Y (NAND2X6)                                0.11       1.39 f
+  alu_u0/U15088/Y (CLKBUFX3)                              0.30       1.70 f
+  alu_u0/U2789/Y (AOI22XL)                                0.22       1.91 r
+  alu_u0/U19684/Y (OAI211X1)                              0.23       2.15 f
+  alu_u0/U19689/Y (NAND2X1)                               0.17       2.32 r
+  alu_u0/U19690/Y (OAI21X2)                               0.09       2.41 f
+  alu_u0/U2027/Y (AOI21X2)                                0.18       2.60 r
+  alu_u0/U19697/Y (OAI21X2)                               0.10       2.70 f
+  alu_u0/U19698/Y (AOI21X4)                               0.14       2.84 r
+  alu_u0/U20022/Y (OAI21X4)                               0.10       2.95 f
+  alu_u0/U36117/Y (INVX8)                                 0.12       3.07 r
+  alu_u0/U78003/Y (OAI21X1)                               0.09       3.16 f
+  alu_u0/U78006/Y (XNOR2X1)                               0.15       3.31 f
+  alu_u0/U11830/Y (CLKINVX1)                              0.15       3.46 r
+  alu_u0/U1266/Y (CLKINVX1)                               0.29       3.75 f
+  alu_u0/U80193/Y (XNOR2X1)                               0.25       4.00 f
+  alu_u0/U16003/Y (OAI22XL)                               0.36       4.36 r
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U9125/CO (CMPR42X1)
+                                                          0.83       5.19 r
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U9088/CO (CMPR42X2)
+                                                          0.70       5.89 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U9051/S (CMPR42X1)
+                                                          0.72       6.61 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U9048/S (CMPR42X1)
+                                                          0.57       7.18 f
+  alu_u0/U17401/S (CMPR42X1)                              0.32       7.49 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U9046/S (CMPR42X1)
+                                                          0.54       8.03 r
+  alu_u0/U18615/Y (NAND2X1)                               0.08       8.11 f
+  alu_u0/U18617/Y (OAI21XL)                               0.21       8.32 r
+  alu_u0/U18618/Y (AOI21X1)                               0.11       8.43 f
+  alu_u0/U18626/Y (OAI21X1)                               0.16       8.59 r
+  alu_u0/U14358/Y (AOI21X2)                               0.09       8.68 f
+  alu_u0/U18655/Y (OAI21X1)                               0.16       8.84 r
+  alu_u0/U18656/Y (AOI21X2)                               0.11       8.95 f
+  alu_u0/U18657/Y (BUFX4)                                 0.20       9.14 f
+  alu_u0/U18808/Y (OAI21XL)                               0.19       9.34 r
+  alu_u0/U18811/Y (XNOR2XL)                               0.18       9.52 f
+  alu_u0/U17709/Y (NOR2BX1)                               0.18       9.69 f
+  alu_u0/u_mod_mult/M_reg[205]/D (DFFHQX2)                0.00       9.69 f
+  data arrival time                                                  9.69
+
+  clock i_clk (rise edge)                                 9.50       9.50
+  clock network delay (ideal)                             0.50      10.00
+  clock uncertainty                                      -0.10       9.90
+  alu_u0/u_mod_mult/M_reg[205]/CK (DFFHQX2)               0.00       9.90 r
+  library setup time                                     -0.21       9.69
+  data required time                                                 9.69
+  --------------------------------------------------------------------------
+  data required time                                                 9.69
+  data arrival time                                                 -9.69
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: alu_u0/R_23
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: alu_u0/u_mod_mult/M_reg[209]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  alu_u0/R_23/CK (DFFQX4)                                 0.00 #     0.50 r
+  alu_u0/R_23/Q (DFFQX4)                                  0.27       0.77 r
+  alu_u0/U17819/Y (NOR2X8)                                0.07       0.84 f
+  alu_u0/U17820/Y (NAND2X2)                               0.09       0.94 r
+  alu_u0/U17822/Y (NOR2X4)                                0.06       1.00 f
+  alu_u0/U2315/Y (NAND2X2)                                0.11       1.11 r
+  alu_u0/U17968/Y (BUFX20)                                0.17       1.28 r
+  alu_u0/U2285/Y (NAND2X6)                                0.11       1.39 f
+  alu_u0/U15088/Y (CLKBUFX3)                              0.30       1.70 f
+  alu_u0/U2789/Y (AOI22XL)                                0.22       1.91 r
+  alu_u0/U19684/Y (OAI211X1)                              0.23       2.15 f
+  alu_u0/U19689/Y (NAND2X1)                               0.17       2.32 r
+  alu_u0/U19690/Y (OAI21X2)                               0.09       2.41 f
+  alu_u0/U2027/Y (AOI21X2)                                0.18       2.60 r
+  alu_u0/U19697/Y (OAI21X2)                               0.10       2.70 f
+  alu_u0/U19698/Y (AOI21X4)                               0.14       2.84 r
+  alu_u0/U20022/Y (OAI21X4)                               0.10       2.95 f
+  alu_u0/U36117/Y (INVX8)                                 0.12       3.07 r
+  alu_u0/U78003/Y (OAI21X1)                               0.09       3.16 f
+  alu_u0/U78006/Y (XNOR2X1)                               0.15       3.31 f
+  alu_u0/U11830/Y (CLKINVX1)                              0.15       3.46 r
+  alu_u0/U1266/Y (CLKINVX1)                               0.29       3.75 f
+  alu_u0/U80193/Y (XNOR2X1)                               0.25       4.00 f
+  alu_u0/U16003/Y (OAI22XL)                               0.36       4.36 r
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U9125/CO (CMPR42X1)
+                                                          0.83       5.19 r
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U9088/CO (CMPR42X2)
+                                                          0.70       5.89 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U9051/S (CMPR42X1)
+                                                          0.72       6.61 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U9048/S (CMPR42X1)
+                                                          0.57       7.18 f
+  alu_u0/U17401/S (CMPR42X1)                              0.32       7.49 f
+  alu_u0/u_mod_mult/DP_OP_30J3_122_3522/U9046/S (CMPR42X1)
+                                                          0.54       8.03 r
+  alu_u0/U18615/Y (NAND2X1)                               0.08       8.11 f
+  alu_u0/U18617/Y (OAI21XL)                               0.21       8.32 r
+  alu_u0/U18618/Y (AOI21X1)                               0.11       8.43 f
+  alu_u0/U18626/Y (OAI21X1)                               0.16       8.59 r
+  alu_u0/U14358/Y (AOI21X2)                               0.09       8.68 f
+  alu_u0/U18655/Y (OAI21X1)                               0.16       8.84 r
+  alu_u0/U18656/Y (AOI21X2)                               0.11       8.95 f
+  alu_u0/U18657/Y (BUFX4)                                 0.20       9.14 f
+  alu_u0/U103472/Y (OAI21XL)                              0.19       9.34 r
+  alu_u0/U103474/Y (XNOR2XL)                              0.18       9.52 f
+  alu_u0/U103475/Y (NOR2BX1)                              0.18       9.69 f
+  alu_u0/u_mod_mult/M_reg[209]/D (DFFHQX2)                0.00       9.69 f
+  data arrival time                                                  9.69
+
+  clock i_clk (rise edge)                                 9.50       9.50
+  clock network delay (ideal)                             0.50      10.00
+  clock uncertainty                                      -0.10       9.90
+  alu_u0/u_mod_mult/M_reg[209]/CK (DFFHQX2)               0.00       9.90 r
+  library setup time                                     -0.21       9.69
+  data required time                                                 9.69
+  --------------------------------------------------------------------------
+  data required time                                                 9.69
+  data arrival time                                                 -9.69
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

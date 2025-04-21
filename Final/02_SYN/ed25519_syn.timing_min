@@ -1,0 +1,328 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'ed25519' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 10
+Design : ed25519
+Version: U-2022.12
+Date   : Thu Dec 12 17:43:38 2024
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: alu_u0/inv_state_reg[2]
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: alu_u0/inv_state_reg[2]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  alu_u0/inv_state_reg[2]/CK (DFFHQX4)                    0.00 #     0.50 r
+  alu_u0/inv_state_reg[2]/Q (DFFHQX4)                     0.19       0.69 r
+  alu_u0/U98148/Y (AOI21XL)                               0.07       0.76 f
+  alu_u0/U98149/Y (NOR2XL)                                0.14       0.89 r
+  alu_u0/inv_state_reg[2]/D (DFFHQX4)                     0.00       0.89 r
+  data arrival time                                                  0.89
+
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.10       0.60
+  alu_u0/inv_state_reg[2]/CK (DFFHQX4)                    0.00       0.60 r
+  library hold time                                      -0.05       0.55
+  data required time                                                 0.55
+  --------------------------------------------------------------------------
+  data required time                                                 0.55
+  data arrival time                                                 -0.89
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.34
+
+
+  Startpoint: alu_u0/alu_cnt_r_reg[2]
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: alu_u0/alu_cnt_r_reg[2]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  alu_u0/alu_cnt_r_reg[2]/CK (DFFHQX4)                    0.00 #     0.50 r
+  alu_u0/alu_cnt_r_reg[2]/Q (DFFHQX4)                     0.20       0.70 f
+  alu_u0/U17823/Y (INVX4)                                 0.08       0.78 r
+  alu_u0/U98147/Y (AOI211XL)                              0.10       0.88 f
+  alu_u0/alu_cnt_r_reg[2]/D (DFFHQX4)                     0.00       0.88 f
+  data arrival time                                                  0.88
+
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.10       0.60
+  alu_u0/alu_cnt_r_reg[2]/CK (DFFHQX4)                    0.00       0.60 r
+  library hold time                                      -0.08       0.52
+  data required time                                                 0.52
+  --------------------------------------------------------------------------
+  data required time                                                 0.52
+  data arrival time                                                 -0.88
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.36
+
+
+  Startpoint: alu_u0/R_23
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: alu_u0/R_22
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock i_clk (rise edge)                  0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  alu_u0/R_23/CK (DFFQX4)                  0.00 #     0.50 r
+  alu_u0/R_23/Q (DFFQX4)                   0.27       0.77 r
+  alu_u0/U93765/Y (AOI211XL)               0.13       0.90 f
+  alu_u0/R_22/D (DFFQX4)                   0.00       0.90 f
+  data arrival time                                   0.90
+
+  clock i_clk (rise edge)                  0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.10       0.60
+  alu_u0/R_22/CK (DFFQX4)                  0.00       0.60 r
+  library hold time                       -0.09       0.51
+  data required time                                  0.51
+  -----------------------------------------------------------
+  data required time                                  0.51
+  data arrival time                                  -0.90
+  -----------------------------------------------------------
+  slack (MET)                                         0.39
+
+
+  Startpoint: alu_u0/R_16
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: alu_u0/R_16
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock i_clk (rise edge)                  0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  alu_u0/R_16/CK (DFFHQX4)                 0.00 #     0.50 r
+  alu_u0/R_16/Q (DFFHQX4)                  0.20       0.70 f
+  alu_u0/U93780/Y (AOI21XL)                0.13       0.83 r
+  alu_u0/U93781/Y (NOR2XL)                 0.09       0.92 f
+  alu_u0/R_16/D (DFFHQX4)                  0.00       0.92 f
+  data arrival time                                   0.92
+
+  clock i_clk (rise edge)                  0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.10       0.60
+  alu_u0/R_16/CK (DFFHQX4)                 0.00       0.60 r
+  library hold time                       -0.08       0.52
+  data required time                                  0.52
+  -----------------------------------------------------------
+  data required time                                  0.52
+  data arrival time                                  -0.92
+  -----------------------------------------------------------
+  slack (MET)                                         0.40
+
+
+  Startpoint: regfile_u0/Tself_r_data_reg[189]
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: regfile_u0/Tself_r_data_reg[189]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  regfile_u0/Tself_r_data_reg[189]/CK (DFFQX1)            0.00 #     0.50 r
+  regfile_u0/Tself_r_data_reg[189]/Q (DFFQX1)             0.25       0.75 f
+  U6961/Y (NAND2XL)                                       0.09       0.84 r
+  U6962/Y (OAI211XL)                                      0.09       0.93 f
+  regfile_u0/Tself_r_data_reg[189]/D (DFFQX1)             0.00       0.93 f
+  data arrival time                                                  0.93
+
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.10       0.60
+  regfile_u0/Tself_r_data_reg[189]/CK (DFFQX1)            0.00       0.60 r
+  library hold time                                      -0.07       0.53
+  data required time                                                 0.53
+  --------------------------------------------------------------------------
+  data required time                                                 0.53
+  data arrival time                                                 -0.93
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.40
+
+
+  Startpoint: regfile_u0/Tself_r_data_reg[134]
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: regfile_u0/Tself_r_data_reg[134]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  regfile_u0/Tself_r_data_reg[134]/CK (DFFQX1)            0.00 #     0.50 r
+  regfile_u0/Tself_r_data_reg[134]/Q (DFFQX1)             0.25       0.75 f
+  U8982/Y (NAND2XL)                                       0.09       0.84 r
+  U8983/Y (OAI211XL)                                      0.09       0.93 f
+  regfile_u0/Tself_r_data_reg[134]/D (DFFQX1)             0.00       0.93 f
+  data arrival time                                                  0.93
+
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.10       0.60
+  regfile_u0/Tself_r_data_reg[134]/CK (DFFQX1)            0.00       0.60 r
+  library hold time                                      -0.07       0.53
+  data required time                                                 0.53
+  --------------------------------------------------------------------------
+  data required time                                                 0.53
+  data arrival time                                                 -0.93
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.40
+
+
+  Startpoint: regfile_u0/Tself_r_data_reg[138]
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: regfile_u0/Tself_r_data_reg[138]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  regfile_u0/Tself_r_data_reg[138]/CK (DFFQX1)            0.00 #     0.50 r
+  regfile_u0/Tself_r_data_reg[138]/Q (DFFQX1)             0.25       0.75 f
+  U9297/Y (NAND2XL)                                       0.09       0.84 r
+  U9298/Y (OAI211XL)                                      0.09       0.93 f
+  regfile_u0/Tself_r_data_reg[138]/D (DFFQX1)             0.00       0.93 f
+  data arrival time                                                  0.93
+
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.10       0.60
+  regfile_u0/Tself_r_data_reg[138]/CK (DFFQX1)            0.00       0.60 r
+  library hold time                                      -0.07       0.53
+  data required time                                                 0.53
+  --------------------------------------------------------------------------
+  data required time                                                 0.53
+  data arrival time                                                 -0.93
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.40
+
+
+  Startpoint: regfile_u0/Tself_r_data_reg[187]
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: regfile_u0/Tself_r_data_reg[187]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  regfile_u0/Tself_r_data_reg[187]/CK (DFFQX1)            0.00 #     0.50 r
+  regfile_u0/Tself_r_data_reg[187]/Q (DFFQX1)             0.25       0.75 f
+  U6975/Y (NAND2XL)                                       0.09       0.84 r
+  U6976/Y (OAI211XL)                                      0.09       0.93 f
+  regfile_u0/Tself_r_data_reg[187]/D (DFFQX1)             0.00       0.93 f
+  data arrival time                                                  0.93
+
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.10       0.60
+  regfile_u0/Tself_r_data_reg[187]/CK (DFFQX1)            0.00       0.60 r
+  library hold time                                      -0.07       0.53
+  data required time                                                 0.53
+  --------------------------------------------------------------------------
+  data required time                                                 0.53
+  data arrival time                                                 -0.93
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.40
+
+
+  Startpoint: regfile_u0/Tself_r_data_reg[133]
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: regfile_u0/Tself_r_data_reg[133]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  regfile_u0/Tself_r_data_reg[133]/CK (DFFQX1)            0.00 #     0.50 r
+  regfile_u0/Tself_r_data_reg[133]/Q (DFFQX1)             0.25       0.75 f
+  U9126/Y (NAND2XL)                                       0.09       0.84 r
+  U9127/Y (OAI211XL)                                      0.09       0.93 f
+  regfile_u0/Tself_r_data_reg[133]/D (DFFQX1)             0.00       0.93 f
+  data arrival time                                                  0.93
+
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.10       0.60
+  regfile_u0/Tself_r_data_reg[133]/CK (DFFQX1)            0.00       0.60 r
+  library hold time                                      -0.07       0.53
+  data required time                                                 0.53
+  --------------------------------------------------------------------------
+  data required time                                                 0.53
+  data arrival time                                                 -0.93
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.40
+
+
+  Startpoint: regfile_u0/Tself_r_data_reg[140]
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: regfile_u0/Tself_r_data_reg[140]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  regfile_u0/Tself_r_data_reg[140]/CK (DFFQX1)            0.00 #     0.50 r
+  regfile_u0/Tself_r_data_reg[140]/Q (DFFQX1)             0.25       0.75 f
+  U9046/Y (NAND2XL)                                       0.09       0.84 r
+  U9047/Y (OAI211XL)                                      0.09       0.93 f
+  regfile_u0/Tself_r_data_reg[140]/D (DFFQX1)             0.00       0.93 f
+  data arrival time                                                  0.93
+
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                       0.10       0.60
+  regfile_u0/Tself_r_data_reg[140]/CK (DFFQX1)            0.00       0.60 r
+  library hold time                                      -0.07       0.53
+  data required time                                                 0.53
+  --------------------------------------------------------------------------
+  data required time                                                 0.53
+  data arrival time                                                 -0.93
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.40
+
+
+1
