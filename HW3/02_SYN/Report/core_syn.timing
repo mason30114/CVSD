@@ -1,0 +1,68 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : core
+Version: U-2022.12
+Date   : Mon Nov  4 19:27:41 2024
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: processing_u0/R_517
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: processing_u0/add_tree_large_stage2_out_reg[3][0][7]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  core               tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  processing_u0/R_517/CK (DFFRX4)                         0.00       0.50 r
+  processing_u0/R_517/QN (DFFRX4)                         0.35       0.85 r
+  processing_u0/U2806/Y (INVX12)                          0.08       0.93 f
+  processing_u0/U3283/Y (INVX12)                          0.05       0.98 r
+  processing_u0/U3282/Y (NAND3X8)                         0.12       1.11 f
+  processing_u0/U3281/Y (INVX16)                          0.15       1.25 r
+  processing_u0/U3670/Y (INVX6)                           0.09       1.34 f
+  processing_u0/U1124/Y (NOR2X4)                          0.20       1.54 r
+  processing_u0/U5309/Y (AND2X8)                          0.25       1.79 r
+  processing_u0/U6586/S (ADDFHX2)                         0.35       2.14 f
+  processing_u0/U6585/S (ADDFHX4)                         0.30       2.43 f
+  processing_u0/U512/Y (NAND2X1)                          0.36       2.79 r
+  processing_u0/U4541/Y (NAND2X6)                         0.15       2.94 f
+  processing_u0/U2853/Y (NAND2X6)                         0.10       3.04 r
+  processing_u0/U2852/Y (NAND2X8)                         0.08       3.12 f
+  processing_u0/U4536/Y (INVX4)                           0.08       3.20 r
+  processing_u0/U9062/Y (INVX6)                           0.09       3.28 f
+  processing_u0/U6423/Y (AOI21X4)                         0.12       3.41 r
+  processing_u0/U6422/Y (XOR2X2)                          0.15       3.56 r
+  processing_u0/add_tree_large_stage2_out_reg[3][0][7]/D (DFFRX2)
+                                                          0.00       3.56 r
+  data arrival time                                                  3.56
+
+  clock i_clk (rise edge)                                 3.35       3.35
+  clock network delay (ideal)                             0.50       3.85
+  clock uncertainty                                      -0.10       3.75
+  processing_u0/add_tree_large_stage2_out_reg[3][0][7]/CK (DFFRX2)
+                                                          0.00       3.75 r
+  library setup time                                     -0.19       3.56
+  data required time                                                 3.56
+  --------------------------------------------------------------------------
+  data required time                                                 3.56
+  data arrival time                                                 -3.56
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
