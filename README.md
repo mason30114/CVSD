@@ -1,8 +1,8 @@
-# NTHU-ICLab-Fall-2022
+# NTU-CVSD-Fall-2024
 
-Integrated Circuit Design Laboratory 積體電路設計實驗
+Computer-Aided VLSI System Design 電腦輔助積體電路系統設計
 
-Lecturer: 黃朝宗老師
+Lecturer: 楊家驤老師
 
 ## ***Copyright Issue***
 If there exists any copyright issue, please let me know!
@@ -11,16 +11,14 @@ If there exists any copyright issue, please let me know!
 
 Please refer to the introduction file to understand our implementation details.
 
-- HW1: Three-input Raster Operations (ROP3) for Computer Graphics 
+- HW1: ALU Design
 
-- HW2: Enigma
+- HW2: Simple RISC-V CPU
 
-- HW3: Logic Synthesis for Enigma
+- HW3: Simple Convolution and Image Processing Engine
 
-- HW3.1: Logic Synthesis for ROP3
+- HW4: IOT Data Filtering
 
-- HW4: QR Code Decoder
+- HW5: APR
 
-- HW5: Digit classification using Depthwise Separable Convolutions
-
-- Final Project: Four-Dimension Kalman filter for GPS
+- Final Project: Elliptic Curve Cryptographic Processor
